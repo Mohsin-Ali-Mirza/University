@@ -1,0 +1,13 @@
+ID,Amount,Location,Time,Fraudulent
+1,100.00,USA,08:15,No
+2,200.00,Canada,13:45,No
+3,50.00,USA,19:30,Yes
+4,75.00,Mexico,11:00,No
+5,300.00,USA,15:20,Yes
+6,150.00,USA,22:00,Yes
+7,25.00,Canada,09:00,No
+8,500.00,Mexico,17:30,Yes
+9,80.00,USA,14:00,No
+
+
+

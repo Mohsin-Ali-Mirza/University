@@ -1,0 +1,14 @@
+Customer ID,Age,Gender,Location,Monthly Charges,Internet Service,Phone Service,TV Service,Churn
+1,35,Male,NY,50,Fiber optic,Yes,Yes,Yes
+2,44,Female,CA,70,DSL,Yes,No,No
+3,22,Male,TX,30,DSL,Yes,No,Yes
+4,55,Female,NY,80,Fiber optic,Yes,Yes,No
+5,33,Male,CA,45,DSL,Yes,No,No
+6,20,Female,TX,25,DSL,Yes,No,Yes
+7,68,Male,NY,100,Fiber optic,Yes,Yes,Yes
+8,50,Female,CA,60,DSL,Yes,No,No
+9,27,Male,TX,35,DSL,Yes,No,No
+10,41,Female,NY,90,Fiber optic,Yes,Yes,Yes
+
+
+

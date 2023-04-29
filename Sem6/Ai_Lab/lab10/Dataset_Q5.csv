@@ -1,0 +1,10 @@
+Customer ID, Age, Gender, Income, Education, Total Spending, Purchase Frequency, Items Purchased
+1, 24, Male, 40000, College, 500, 10, 20
+2, 35, Female, 60000, College, 1000, 5, 10
+3, 50, Male, 80000, Graduate, 2000, 2, 5
+4, 42, Female, 70000, Graduate, 1500, 4, 12
+5, 28, Male, 45000, College, 800, 8, 18
+6, 38, Female, 90000, Graduate, 2500, 1, 3
+7, 56, Male, 120000, Postgrad, 3000, 1, 5
+8, 33, Female, 55000, College, 1200, 6, 15
+9, 45, Male, 65000, Graduate, 1800, 3, 7
