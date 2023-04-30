@@ -1,0 +1,32 @@
+.container {
+	margin: 20px;
+	padding: 20px;
+	border: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+}
+
+label {
+	font-weight: bold;
+}
+
+input {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+button {
+	margin: 10px;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+}
+
+p#result {
+	font-weight: bold;
+	margin: 10px;
+}
