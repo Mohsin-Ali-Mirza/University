@@ -1,0 +1,15 @@
+Remove The existing card from PC and add Wifi Card
+
+Change the router to Static IP such that 
+imagine it belongs to one of the network of main
+
+Gateway is Main now
+Give the DHCP some other ID's in Network Tab downwards
+
+Change SSID: Mohsin_k200353
+in wireless tab
+
+Changing Secuirty go to wireless and then wireless_security
+select WEP and then ur 10 digit password
+
+Make sure to reconnet with PC's after changing SSID i.e wireless refresh connect

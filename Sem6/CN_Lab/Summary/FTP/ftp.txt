@@ -1,0 +1,7 @@
+turn FTP on, give privileges
+Go to Host, cmd, gtp server's IP
+? to look at commands get filename,
+texteditor create a file
+dir all files
+put filename (for Upload)
+get filename (for Download)

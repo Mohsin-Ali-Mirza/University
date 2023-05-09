@@ -1,0 +1,29 @@
+First Setup DNS Server
+1.Go to Services
+1. Name of website
+2. Website's Device IP
+
+Use this server for Gmail.com and Hotmail.com
+configure in the same way
+
+---------------------------------------------------------------
+For SMTP
+1.Make Sure your gmail.com is setup at DNS
+2. Go to gmail.com "Server" and go to SMTP
+
+3. add gmail.com 
+username mohsin 
+pass mohsin
+
+4.add gmail.com
+username zaid
+pass zaid
+
+5.Open The Client 
+6. Go to email
+mohsin
+mohsin@gmail.com
+gmail.com
+gmail.com
+mohsin
+mohsin

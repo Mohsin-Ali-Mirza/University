@@ -1,0 +1,13 @@
+DHCP via Server
+Go to Services
+then do settings
+
+DHCP via Router
+Router(config)#ip dhcp pool hello
+Router(dhcp-config)#network NETWORK_ADD SUBNET
+Router(dhcp-config)#default-router ROUTER_IP
+Router(dhcp-config)#dns-server DNS_IP
+Router(dhcp-config)#ex
+Router(config)#ip dhcp excluded-address START_IP END_IP
+
+show ip dhcp binding

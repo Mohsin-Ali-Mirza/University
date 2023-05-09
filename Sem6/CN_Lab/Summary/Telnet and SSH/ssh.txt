@@ -1,0 +1,8 @@
+hostname mohsin
+ip domain mohsin_k200353
+ip domain name mohsin_k200353
+crypto key generate rsa
+1024
+ip ssh version 2
+line vty 0 15
+transport input ssh

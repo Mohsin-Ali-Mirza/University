@@ -1,0 +1,45 @@
+Make Topology and Routing Implemented
+
+1-99
+Standard ACL(Dest+Out)
+Find the router nearest to Dest (R1)
+
+
+Router(config)#access-list 2 deny Source_IP 0.0.0.0
+Router(config)#access-list 2 permit any
+Router(config)#int fa0/1
+Router(config-if)#ip access-group 2 out
+----------------------------------------------------------------------------------
+
+
+Named Standard ACL
+
+Router(config)#ip access-list standard Hello
+Router(config-std-nacl)#deny Source_IP 0.0.0.0
+Router(config-std-nacl)#permit any
+Router(config-std-nacl)#exit
+Router(config)#int fa0/1
+Router(config-if)#ip access-group Hello out
+Router(config)#no ip access-list standard Hello
+----------------------------------------------------------------------------------
+
+
+
+100-199
+Extend ACL(Source+In)
+Find the router neartest to Source(R0)
+
+Router(config)#ip access-list extended World
+Router(config-ext-nacl)#deny tcp Source_IP 0.0.0.0 Dest_IP 0.0.0.0 eq 80
+Router(config-ext-nacl)#permit tcp any any
+Router(config-ext-nacl)#ex
+Router(config)#int fa0/0
+Router(config-if)#ip access-group World in
+Router(config-if)#ex
+----------------------------------------------------------------------------------
+
+
+Router(config)#access-list 102 deny tcp Source_IP 0.0.0.0 Dest_IP 0.0.0.0 eq 80
+Router(config)#access-list 102 permit tcp any any
+Router(config)#int fa0/0
+Router(config-if)#ip access-group 102 in

@@ -1,0 +1,39 @@
+PreRequesites
+Router(config-if)#int fa0/0
+Router(config-if)#ip nat inside
+Router(config-if)#int fa0/1
+Router(config-if)#ip nat outside
+
+---------------------------------------------------------------------------------------
+Other
+
+no ip nat inside source static
+show ip nat translation 
+
+---------------------------------------------------------------------------------------
+Static NAT 
+
+Router(config-if)#ip nat inside source static 192.168.10.2 200.200.200.200
+Router(config)#ex
+
+---------------------------------------------------------------------------------------
+
+Dynamic NAT
+
+Router(config)#access-list 10 permit 192.168.10.0 0.0.0.255
+Router(config)#ip nat pool CCNP 200.200.200.1 200.200.200.200 netmask 255.255.255.0
+Router(config)#ip nat inside source list 10 pool CCNP
+
+---------------------------------------------------------------------------------------
+
+PAT
+Router(config)#access-list 10 permit 192.168.10.0 0.0.0.255
+R1(config)#ip nat pool ccna 200.200.200.1 200.200.200.200 netmask 255.255.255.0
+R1(config)#ip nat inside source list 10 pool ccna overload 
+R1(config)#int fa0/1
+
+OR
+
+Router(config)#access-list 10 permit 192.168.10.0 0.0.0.255
+Router(config)#ip nat inside source list 10 int fa0/1 overload
+ 

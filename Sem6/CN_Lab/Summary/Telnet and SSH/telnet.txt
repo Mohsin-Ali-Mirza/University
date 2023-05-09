@@ -1,0 +1,14 @@
+en
+config t
+int vlan 1
+ip address switch_IP SubnetMask
+no sh
+exit
+
+line vty 0 15
+password cisco
+login
+end
+
+config t
+enable password cs

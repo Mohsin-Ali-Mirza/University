@@ -1,0 +1,29 @@
+Make Topology
+
+Go to Each Switch and go to
+Vlan Database and add Vlan Name and number
+CS:10
+EE:20
+
+Also Remember select 1 single Ip 
+for Router so in this case 192.168.1.1
+
+Go To Switch and assign respective Vlan's Accespoint
+and TrunkPoint
+
+Different Networks Router On Stick
+Dont Forget to add Vlan Name And number on Router as well
+
+Last Step Go to Router
+
+Router(config)#int fa0/0.10
+Router(config-subif)#encapsulation dot1Q 10
+Router(config-subif)#ip address 192.168.1.1 255.255.255.0
+exit
+int fa0/0.20
+encapsulation dot1Q 20
+Router(config-subif)#ip address 192.168.2.1 255.255.255.0
+
+no shutdown with GUI no assigning of IP required
+
+Make Sure to make switch to Router Trunk
