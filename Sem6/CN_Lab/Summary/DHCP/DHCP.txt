@@ -1,0 +1,14 @@
+#Router Settings if No DHCP Server
+
+#Router#              config t
+#Router(config)#      ip dhcp pool NetworkName          
+#Router(dhcp-config)# network 10.0.0.0 255.0.0.0      #X.X.X.0 Always
+#Router(dhcp-config)# default-router 10.0.0.1         #Ip address of router, First Ip of PC0 is 10.0.0.2
+#Router(dhcp-config)# dns-server 192.168.1.3          #If you want to set-up automatic DNS server
+#Router(dhcp-config)# exit
+#Router(config)#      ip dhcp excluded_address 10.0.0.1 10.0.0.1    (Start_Range End_Range)
+#Router(config)#      ex
+#Router#              show ip dhcp binding
+
+#If DHCP Server is being used
+#Go to DHCP Server, Services, DHCP & Configure
