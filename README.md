@@ -17,9 +17,9 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 ### Semester 1
 
-- [Programming Fundamentals (PF)](link)
-- [Programming Fundamentals - Lab (PF Lab)](link)
-- [Applied Physics](link)
+- Programming Fundamentals (PF)
+- Programming Fundamentals - Lab (PF Lab)
+- Applied Physics
 - Calculus and Analytical Geometry (Cal)
 
 ### Semester 2
