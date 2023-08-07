@@ -1,0 +1,7 @@
+unlocking system
+
+connect sys as sysdba
+password: your system password
+
+unlocking hr
+alter user hr accounbt unlock;

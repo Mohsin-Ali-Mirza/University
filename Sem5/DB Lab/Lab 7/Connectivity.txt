@@ -1,0 +1,16 @@
+The link is having lab manual and all the connectivity files.You only need to submit one task that is the connectivity of your DB Project.
+
+
+https://drive.google.com/drive/folders/11mie2NGRmSKAjRn2HPoXHcCpG3h1eA4t?usp=sharing
+
+
+
+The task is to show the connectivity of your Project.
+
+follow the given sequence to execute these files for php.
+register.php
+server.php
+errors.php
+style.css
+login.php
+index.php
