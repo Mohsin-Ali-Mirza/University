@@ -7,7 +7,7 @@ Welcome to the repository for my university courses. Here, you can find the cour
 - [Semester 1](link)
 - [Semester 2](link)
 - [Semester 3](link)
-- [Semester 4](link)
+- [Semester 4](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4)
 - [Semester 5](link)
 - [Semester 6](link)
 - [Semester 7](link)
@@ -20,19 +20,21 @@ Welcome to the repository for my university courses. Here, you can find the cour
 - [Programming Fundamentals (PF)](link)
 - [Programming Fundamentals - Lab (PF Lab)](link)
 - [Applied Physics](link)
-- [Calculus and Analytical Geometry (Cal)](link)
+- Calculus and Analytical Geometry (Cal)
 
 ### Semester 2
 
 - [Object Oriented Programming (OOP)](link)
 - [Object Oriented Programming - Lab (OOP Lab)](link)
 - [Differential Equations (DE)](link)
+- Digital Logic Design (DLD)
+- Digital Logic Design - Lab (DLD Lab)
 
 ### Semester 3
 
 - [Data Structures (DS)](link)
 - [Data Structures - Lab (DS Lab)](link)
-- [Discrete Structures (DS)](link)
+- [Discrete Structures](link)
 - [Computer Organization and Assembly Language (COAL)](link)
 - [Computer Organization and Assembly Language - Lab (COAL Lab)](link)
 - [Linear Algebra (LA)](link)
