@@ -1,0 +1,10 @@
+Write an OpenMP C program to perform the mathematical operation (multiply, divide, etc.) on each element of an array of 100K+ elements of double values.
+Use critical pragma to sum the elements of the array.
+The master thread should print the sum.
+Write and execute your program for 1, 2, 4, 8, 10, 20, 100, and 200 threads.
+Submit your results using screen captures and a single .c file.
+DO NOT submit zip files.
+Ask questions by posting comments.
+Question: How are a group of C statements inside a parallel block executed only by a single thread?
+Hint: Try to find an OpenMP #pragma as a solution.
+Note.  The contents covered will be part of Week # 4 slides.\
