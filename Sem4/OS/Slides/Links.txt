@@ -1,0 +1,3 @@
+https://testbook.com/question-answer/a-counting-semaphore-was-initialized-to-7-then-20--5aa61761360f080c27722da1
+
+http://www.netlogoweb.org/launch#http://ccl.northwestern.edu/netlogo/models/models/Sample%20Models/Computer%20Science/Dining%20Philosophers.nlogo

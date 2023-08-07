@@ -1,0 +1,86 @@
+#include <stdio.h> 
+#include <unistd.h> 
+#include <stdlib.h>  
+#include <pthread.h> 
+#include <semaphore.h> 
+#include <time.h>
+#define totalcars 30
+#define maxcar 3
+
+sem_t east;
+sem_t north;
+sem_t mutex;
+int origin[totalcars];
+int interdir;
+
+int get_oppdir(int o) 
+{
+	return (o==0) ? 1 : 0;
+}
+void *func(void* cid)
+{
+	 int id = *(int*) cid;
+	 int num_waiting[2];
+	 int num_inside=0;
+	 num_waiting[0]=0;
+	 num_waiting[1]=0;
+	 
+	 sem_wait(&mutex);
+	 num_waiting[origin[id]]++;
+	 if(num_inside==0)
+	 {
+	 	interdir=origin[id];
+	 }
+	 if(origin[id]==0)
+		printf("Car %d going north to south\n",id);
+	 else
+		printf("Car %d going east to west\n",id);
+
+	num_waiting[origin[id]]--;
+	num_inside++;
+	sleep(1);
+	num_inside--;
+	int od = get_oppdir(origin[id]);
+
+	if(num_inside==0)
+	{
+		if(num_waiting[od] > 0)
+		{
+			(od==0) ? sem_post(&north) : sem_post(&east);
+		}
+		else 
+		{
+			(origin[id]==0) ? sem_post(&north) : sem_post(&east);
+		} 
+	}
+	sem_post(&mutex);
+}
+int main()
+{
+	srand(time(0));
+	sem_init(&east,0,1);
+	sem_init(&north,0,1);
+	sem_init(&mutex,0,1);
+
+	int ids[totalcars];
+	pthread_t cthread[totalcars];
+	int i;
+
+	for(i=0;i<totalcars;i++)
+	{
+		ids[i] = i;
+	}
+	for(i=0;i<totalcars;i++)
+	{
+		int num = (rand() %(1 - 0 + 1)) + 0;
+		origin[i]=num;
+	}
+	for(i=0;i<totalcars;i++)
+	{
+		pthread_create(&cthread[i], NULL, func, (void*)&ids[i]);
+	}
+	for(i=0;i<totalcars;i++)
+	{
+		pthread_join(cthread[i], NULL);
+	}
+}

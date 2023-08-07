@@ -1,0 +1,13 @@
+Outline for Final exam CS-2008
+ 
+1. Solution(Root) of equations in one variable:
+2. Interpolation and Polynomial approximation:
+3. Numerical differentiation and Integration:
+4. Differential Equations:
+5. Direct Method for solving linear system:
+6. Iterative Techniques for solving Ax=b:
+7. Approximating Eigenvalues :
+8. One-Dimensional Optimization:
+
+ 
+Formula Sheet will be provided
