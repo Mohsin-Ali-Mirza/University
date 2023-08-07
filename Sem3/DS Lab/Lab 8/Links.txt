@@ -1,0 +1,16 @@
+Dear students,
+
+
+for better learning you can check this given link for data structure visualization w.r.t  to algorithm.
+https://visualgo.net/en
+
+Also DS is considered critical segment in interviews 
+so few links i am sharing do check and do prep, this will not only help you in your final exam but also prepare for job market too.
+https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0
+
+
+https://towardsdatascience.com/seven-7-essential-data-structures-for-a-coding-interview-and-associated-common-questions-72ceb644290
+
+https://visualgo.net/en?authuser=0
+
+https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/tutorial/?authuser=0

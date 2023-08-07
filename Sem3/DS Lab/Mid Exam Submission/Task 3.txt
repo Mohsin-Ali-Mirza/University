@@ -1,0 +1,96 @@
+#include <iostream>
+using namespace std;
+
+class Node
+{
+public:
+	int data;
+	Node* next;
+
+	Node(int data)
+	{
+		this->data = data;
+		next = NULL;
+	}
+};
+
+class sll
+{
+public:
+	Node* head;
+	int count = 0;
+	sll()
+	{
+		head = NULL;
+	}
+
+
+	void insertAtEnd(int d)
+	{
+		Node* new_Node = new Node(d);
+		Node* curr = head;
+		if (head == NULL)
+			head = new_Node;
+		else
+		{
+			while (curr->next != NULL)
+				curr = curr->next;
+
+			new_Node->next = curr->next;
+			curr->next = new_Node;
+		}
+		count++;
+	}
+
+
+	void traverse()
+	{
+		Node* curr = head;
+		while (curr != NULL)
+		{
+			cout << curr->data << "->";
+			curr = curr->next;
+		}
+		cout << "NULL\n";
+	}
+
+	void fun()
+	{
+		Node* curr = head;
+		Node* prev = head;
+		curr = curr->next;
+		while(curr!=NULL && curr->next!=NULL)
+		{
+			
+			if(curr->data < prev->data)
+			{
+				swap(curr->data,prev->data);
+			}
+			else if(curr->data < curr->next->data)
+			{
+				swap(curr->data,curr->next->data);
+			}
+			curr = curr->next->next;
+			prev = prev->next->next;
+		}
+	}
+
+};
+
+int main()
+{
+	sll l1;
+	int n;
+	int num;
+	cin>>n;
+	for(int i=0;i<n;i++)
+	{
+		cin>>num;
+		l1.insertAtEnd(num);
+	}
+	l1.fun();
+	l1.traverse();
+
+
+	return 0;
+}
