@@ -1,6 +1,0 @@
-Important Note: 
-The code is given to study MPI programs. You could be asked to build any logic based on your 
-Learn how different MPI functions are used.
-Other MPI programming techniques are also present in these files.
-Note that we have 5 basic MPI API calls are at most 10 other collective communicator calls. 
-NK.

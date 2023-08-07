@@ -1,9 +1,0 @@
-Miscaneous Links
-https://www.youtube.com/watch?v=JkbgMnL4xO0
-https://www.youtube.com/watch?v=JFxVjS0yVQ8
-https://www.youtube.com/watch?v=c0JPxu0BgZE
-https://www.youtube.com/watch?v=rP_LlH0IZb0
-
-MapReduce paper - Sections: 1 (full), 2 (full), 3 (full), and  4.3 and 4.4 are part of the syllabus.
-HDFS paper - Sections: I (full) and II (full) are part of the syllabus.
-CUDA syllabus consists of all slides in Week # 15, Week # 16 and CUDA Programming Chapter # 3 (see attached pdf).
