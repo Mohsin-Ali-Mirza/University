@@ -1,0 +1,31 @@
+Final Syllabus includes all of the topics covered after mid-term, namely CSP, Bayesian Networks, Supervised & Unsupervised Learning, Reinforcement Learning, Minimax & Pruning, and all other if I missed any.
+
+
+As for the stuff that I discussed today
+Create Resumes and avoid making resumes longer than 1 page.
+All of you should try to create LinkedIn profiles and connect with each other, endorse each other's skills and write recommendations for each other.
+Curate your LinkedIn profile with an about section, your past experiences(if any),add a featured section with your best projects and try to keep it as updated as possible.
+Create GitHub Profiles and add projects, even the simplest ones on a weekly or daily basis. If you're not accustomed to using git commands, then download GitHub Desktop and you can perform all of GitHub related action via cursor interaction.
+Create your own Portfolio.
+You can setup Linters in your project using this link. Go to the link and then go to the folder named after the tech stack that you are using and follow the read Me in that repo.
+https://github.com/microverseinc/linters-config/tree/master
+
+VS Code extensions and shortcuts that could be helpful
+https://www.educative.io/blog/top-vscode-extensions
+Genie AI.
+GitHub co-pilot.
+GitLens.
+Regarding internships and job searching.
+Always do research about the company that you're applying for including things like(check this extension out as it could help with this https://grow.clearbit.com/connect/onboarding)
+- What's the salary range for people with same jobs in that company?
+- What's the salary range for people with same jobs in other companies in that specific region?
+- What other roles are open in that company?
+- Find details about the company in general.
+These things help with negotiating job offers and could lead to yourself landing a better job offer and avoid getting exploited.
+Create a Prampt account and schedule mock interviews on a weekly basis to get accustomed to taking & giving interviews, so you can get familiar with the concept of real-time interviews and develop the ability to explain your thought process or code in real-time.
+
+Other than this, you can try taking on weekly tests/coding challenges on a weekly basis at sites like Hackerrank, LeetCode etc, to develop good technical skills.
+
+And the last thing is to never shy away from taking interviews as it helps you learn & grow a lot as a programmer, so, whenever you see an opening, apply for it as it will serve as a good experience even if you don't land the job.
+
+As for interviews, always follow-up on your interviews 3-4 days after taking one. Even when you don't get accepted, leave a follow-up message as it leaves a good impression on the company that you applied for and shows your professionalism.
