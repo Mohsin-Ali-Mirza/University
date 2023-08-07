@@ -1,4 +1,4 @@
-# Theory Of Automata
+# Operating Systems
 
 ## Course Materials
 
