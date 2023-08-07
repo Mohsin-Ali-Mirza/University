@@ -6,7 +6,7 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 - [Semester 1](link)
 - [Semester 2](link)
-- [Semester 3](link)
+- [Semester 3](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3)
 - [Semester 4](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4)
 - [Semester 5](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem5)
 - [Semester 6](link)
@@ -32,12 +32,12 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 ### Semester 3
 
-- [Data Structures (DS)](link)
-- [Data Structures - Lab (DS Lab)](link)
-- [Discrete Structures](link)
-- [Computer Organization and Assembly Language (COAL)](link)
-- [Computer Organization and Assembly Language - Lab (COAL Lab)](link)
-- [Linear Algebra (LA)](link)
+- Data Structures (DS)
+- [Data Structures - Lab (DS Lab)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3/DS%20Lab)
+- [Discrete Structures](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3/Discrete)
+- [Computer Organization and Assembly Language (COAL)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3/Coal%20Lab)
+- [Computer Organization and Assembly Language - Lab (COAL Lab)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3/Coal)
+- [Linear Algebra (LA)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3/LA)
 
 ### Semester 4
 
@@ -61,8 +61,8 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 - [Artificial Intelligence (AI)](link)
 - [Artificial Intelligence - Lab (AI Lab)](link)
-- [Computer Networks (CN)](link)
-- [Computer Networks - Lab (CN Lab)](link)
+- Computer Networks (CN)
+- Computer Networks - Lab (CN Lab)
 - [Software Engineering (SE)](link)
 - [Deep Learning for Perception (DLP)](link)
 
