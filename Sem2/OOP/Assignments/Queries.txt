@@ -1,0 +1,514 @@
+Query: 
+
+List of queries with answers!
+
+Query 1:
+I am having an issue regarding removing input taking from my main. I have attached a piece of code in which I am taking a movie selection or an input that will display a summary. I am unable to understand how can I convert it into a function which can be made inside the class as I am accessing movie name from different objects.
+
+Query 2:
+I wanted to know can we call the input function for movie name and MPAA rating inside the constructor or we should call it after object creation in the main?
+
+Query 3:
+I want to ask that can we call an input function of the class in a default constructor if we want to take input when the object will be made?
+
+Query 4:
+Sir, as you said in todays class that we should not do calculation in getter so, in Q2 of assignment we have to make a function getAverage() so , can should we call another function (i.e: calculateAverage() ) in that getter function ?
+
+Answers:
+
+Query 1:
+The working is fine, just make a global function for that work.
+
+Query 2:
+No, do not call any function in constructor, call them separately from main. 
+
+Query 3:
+No, call input separately from main.
+
+Query 4:
+No, you should not call any calculation function in getter. The consequences for that already explained in class in detail.
+
+Happy coding :)
+
+Query:
+
+Salam Sir,
+The following code is a copy of your code which i was testing on different compilers, but it is not working. I also have highlighted the line with the error for your reliability, I will be waiting for a solution.
+
+
+#include<iostream>
+using namespace std;
+
+class XD{
+private:
+int*x;
+public:
+XD(){ // default constructor
+}
+XD(int m){ // para... constructor
+x=new int;
+*x=m;
+}
+XD(const XD &x1){ //copy constructor
+x=new int;
+*x=x1.getX(); // Error
+}
+const int getX(){
+return *x;
+}
+void setX(int m){
+*x=m;
+}
+void printX(void){
+cout<<"X="<<*x<<endl;
+}
+~XD(){
+delete(x);
+}
+};
+
+int main(){
+XD x1(5);
+XD x2=x1;
+x1.printX();
+x2.printX();
+
+x1.setX(3);
+x1.printX();
+x2.printX();
+return 0;
+}
+
+Answer/Solution:
+
+#include<iostream>
+using namespace std;
+
+class XD
+{
+private:
+int *x;
+
+public:
+XD(){} // default constructor
+
+XD(int m)
+{ // para... constructor
+x=new int;
+*x=m;
+}
+
+XD(const XD &x1)
+{ //copy constructor
+x = new int;
+//*x = x1.getX(); // Error
+*x = *(x1.x); //correct statement
+}
+
+const int getX()
+{
+return *x;
+}
+
+void setX(int m)
+{
+*x=m;
+}
+
+void printX(void)
+{
+cout<<"X="<<*x<<endl;
+}
+
+~XD()
+{
+delete(x);
+}
+};
+
+int main()
+{
+XD x1(5);
+XD x2=x1;
+x1.printX();
+x2.printX();
+
+x1.setX(3);
+x1.printX();
+x2.printX();
+return 0;
+}
+
+
+Query 1:
+
+Sir, inline functions are used when there is no recursion or looping. Then why are we discussing stack and push and pop?
+
+Answer:
+
+Yes, it is one of the states where inline functions don't work.
+
+We discussed stack operations because the portion of the stack-allocated for a single function call is called a stack frame. In other words, for each function call, a new space (i.e., stack frame) is created on the stack but for inline functions, such things don't happen. By definition, if the compiler has in-lined a function, there is no explicit function call at the calling site because the compiler has replaced the call with the body of the function. Thus, there will be no stack setup for the call.
+
+Query 2:
+
+Dear sir,
+Check this code please,
+
+#include<iostream>
+using namespace std;
+
+class Circle
+{
+public:
+float radius;
+float area;
+
+Circle()
+{
+radius = 0;
+}
+Circle(float radius)
+{
+this->radius= radius;
+}
+void calculate()
+{
+area = 3.141*radius*radius;
+cout << area;
+}
+};
+
+int main()
+{
+int y;
+float r;
+cout << "Enter num of object : ";
+cin >> y;
+
+
+Circle *x = new Circle[y];
+
+for (int i=0; i<y;i++)
+{
+cout << "Enter radius : ";
+cin >> r;
+x[i] = Circle(r);
+
+}
+for (int i=0 ; i<y ;i++)
+{
+x[i].calculate();
+cout << endl;
+}
+}
+
+Sir how to call this dynamically array of objects parameterized constructor can called implicitly?
+
+Answer:
+
+Your code is fine for the required task. For dynamic initialization "new" keyword require non parameterized constructor if we add a parameterized constructor. So we will use a default constructor for it.
+
+For implicit call, check the below code with updated statements, but it will be of no use as I have hardcoded it for 5 objects.
+
+#include<iostream>
+using namespace std;
+
+class Circle
+{
+public:
+float radius;
+float area;
+
+Circle()
+{
+radius = 0;
+}
+Circle(float radius)
+{
+this->radius= radius;
+}
+void calculate()
+{
+area = 3.141*radius*radius;
+cout << area;
+}
+};
+
+int main()
+{
+int y;
+float r;
+cout << "Enter num of object : ";
+cin >> y;
+
+int *a = new int[y];
+
+for (int i=0; i<y;i++)
+{
+cout << "Enter radius : ";
+cin >> a[i];
+}
+
+Circle *x = new Circle[y]{a[0], a[1], a[2], a[3], a[4]} ;
+
+
+for (int i=0 ; i<y ;i++)
+{
+x[i].calculate();
+cout << endl;
+}
+}
+
+Week 9: Exercise
+
+
+There is a motor repair shop which has different mechanics working in it. The mechanics are paid a salary and their experience is considered. The shop is reliable and has a lot of customers. Each mechanic can repair or paint a car and generate bills accordingly. The customers have to pay Rs.5000 for repair and Rs10,000 for paint.  Furthermore, some of the customers are valued customers, for these customers the mechanic charges only for repair and Rs.7500 for paint. A mechanic is paid 5% of this charged amount as daily wages (apart from monthly salary).
+
+
+Aoa, sir, how can we explicitly use a copy constructor/assignment operator when the one of the data members is const in nature. When using assignment operator in DEV C++ with const attributes, the compiler is throwing errors.
+Thanks for your time.
+
+
+Answer:
+
+
+#include<iostream>
+
+
+using namespace std;
+
+
+class A
+{
+const int x;
+
+public:
+A() : x(0)
+{}
+
+A(int y) : x(y)
+{
+
+}
+
+A(const A &d) : x(d.x)
+{
+}
+
+display()
+{
+cout<<endl<<x;
+}
+
+};
+
+
+main()
+{
+A a1(5);
+A a2 = a1;
+a1.display();
+a2.display();
+}
+
+
+Some common queries:
+
+
+
+Q1:
+I want to ask that is it important to use each and every concept taught in the class? Like friend function, diamond problem..because our flow doesn't need this.
+
+
+
+A1:
+No, but try to incorporate and implement as many concepts as possible, so that you can understand the need for a particular topic/concept for real-world project/programming. 
+
+
+
+Q2:
+Sir, I tried the swapping code as in slide 11 of week 13 but it is showing many errors. Sir, kindly guide me. I will be thankful to you.
+
+
+
+A2:
+"swap" is a compiler-defined keyword for its own purpose. The below code will work fine. 
+
+
+/* Replaced the word swap with swapp */
+
+
+#include<iostream>
+using namespace std;
+
+template<class T>
+void swapp(T &a,T &b)
+{
+T tem;
+tem=a;
+a=b;
+b=tem;
+}
+int main()
+{
+int i = 10;
+int h = 15;
+
+swapp(i, h);
+}
+
+
+Q3:
+Sir I want to ask that how generic classes can be used in inheritance. Can you please provide a snippet that follows inheritance from non generic class but generic derived class , and genric base class but non generic derived class  and for Has-A relationship too.
+
+
+
+A3:
+This isn't really a concern. You can follow the same concept/syntax that we have studied. 
+
+
+/* Below is the snippet for your help */
+
+
+class Base
+{
+
+
+};
+
+
+template<class T>
+class Derived : public Base
+{
+     T x;
+};
+
+
+Some common queries:
+
+
+Q1:
+
+
+In inheritance hierarchy, do we include functions and attribute names? Or they are only included in the class diagram?
+
+
+
+R:
+
+
+For hierarchy: Only class name. 
+For class diagram: class name, attributes with an access specifier(+,-,#) and their datatype, functions prototype with an access specifier (+,-,#).
+
+
+Q2: (Diamond Problem)
+
+
+I am stuck in this problem where I have used virtual keyword but the warning still persists in my code . Can you tell me where am I wrong ?
+
+
+
+#include<iostream>
+using namespace std;
+
+class shop {
+public:
+int a=14;
+void get()
+{
+cout<<a;
+}
+};
+class customer :virtual public shop
+{
+
+};
+class specialcustomer : public customer
+{
+
+};
+
+class bill : public customer ,public specialcustomer
+{
+
+};
+
+
+int main()
+{
+bill obj;
+obj.get();
+
+}
+
+
+
+R:
+
+
+Below is the correct version of your code.
+
+#include<iostream>
+using namespace std;
+
+class shop {
+public:
+//int a=14; //bad practice //avoid it
+int a;
+void get()
+{
+a = 14;
+    cout<<a;
+}
+};
+class customer :virtual public shop
+{
+
+};
+class specialcustomer : virtual public shop
+{
+
+};
+
+class bill : public customer ,public specialcustomer
+{
+
+};
+
+
+int main()
+{
+bill obj;
+obj.get();
+
+}
+
+
+
+Q3:
+
+
+kindly upload the online class recording of 12th April. I will be very thankful to you.
+
+
+
+R:
+
+
+Unfortunately, due to some technical issues, I haven't received the recording of Monday's(12th April) class. But on Tuesday's(13th April) class, I have repeated the content of Monday as well, so you can check Tuesday's(13th April) recording. 
+
+
+
+Q4:
+
+
+Sir can you please inform me that from the book should I focus on 11.5 11.6, 11.7 and 11.9? From the book C++ how to program by dietel. Or is it not in the syllabus yet?
+
+
+
+R:
+
+
+1) 11.1 till 11.7
+2) 11.12

@@ -1,0 +1,7 @@
+Q1: Inappropriate check for negative values
+
+k200353 Mohsin Ali MirzaMay 7, 2021
+Could you please send me the correct method for checking the negative values so that I can prevent myself from making this mistake in the near future?
+
+k181161 Muhammad Sufyan SiddiquiMay 7, 2021
+Use while or do while loop for checking the entered value. If the entered value > 0, break the loop else continue.
