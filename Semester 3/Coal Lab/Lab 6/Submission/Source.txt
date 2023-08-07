@@ -1,0 +1,197 @@
+****************************************** TASK 1 ****************************************
+Include Irvine32.inc
+.data
+first byte "Generating 20 random Integers between 0 and 990",0
+
+.code
+main PROC
+mov eax, black + (green * 16)
+call settextcolor
+call clrscr
+mov edx, offset first
+call writestring
+call crlf
+mov dh,0
+mov dl,-1
+
+mov ecx, 20
+l1:
+	mov eax,991
+	call randomrange
+	inc dh
+	inc dl
+	call gotoxy
+	call writedec
+	mov eax,5
+	call delay
+loop l1
+
+
+
+exit
+main ENDP
+end main
+
+
+
+****************************************** TASK 2 ****************************************
+Include Irvine32.inc
+
+
+.data
+maxRow dword ?
+maxCol dword ?
+currRow byte ?
+currCol byte ?
+
+.code
+main PROC
+
+mov ecx,100
+l1:
+call getmaxxy
+movzx ebx, dx		;MaxCol Value
+mov maxCol,ebx
+
+movzx ebx, ax
+mov maxRow,ebx		;MaxRow Value
+
+mov eax,MaxRow
+call randomrange
+mov currRow,al
+
+mov eax,MaxCol
+call randomrange
+mov currCol,al
+
+mov edx,0
+mov dl,currCol
+mov dh,currRow
+
+call gotoxy
+mov eax,"#"
+call writeChar
+mov eax, 100
+call delay
+
+loop l1
+
+exit
+main ENDP
+end main
+
+****************************************** TASK 3 ****************************************
+Include Irvine32.inc
+
+.data
+first byte "Generate 10 unsigned integers in the range 0 t0 4,294,967,294:",0
+second byte "Generate 10 signed integers in the range -50 to +49:",0
+arr1 dword 10 dup(?)
+arr2 sdword 10 dup(?)
+
+.code 
+main PROC
+
+mov ecx,10
+mov esi,0
+
+l1:
+call random32
+mov arr1[esi*Type arr1],eax
+mov eax,100
+call randomrange
+sub eax,50
+mov arr2[esi*Type arr2],eax
+inc esi
+loop l1
+
+mov edx, offset first
+call writestring
+mov ecx, 10
+mov esi,0
+call crlf
+l2:
+mov eax, arr1[esi*Type arr1]
+call writedec
+inc esi
+call crlf
+loop l2
+
+call crlf
+mov edx, offset second
+call writestring
+mov esi,0
+mov ecx, 10
+mov eax,0
+call crlf
+l3:
+mov eax, arr2[esi*Type arr1]
+call writeint
+inc esi
+call crlf
+loop l3
+
+
+
+exit
+main ENDP
+end main
+
+
+
+
+
+****************************************** TASK 4 ****************************************
+Include Irvine32.inc
+
+BUFFER_SIZE = 501
+
+.data
+buffer BYTE BUFFER_SIZE DUP(?)
+filename byte "MyFile.txt",0
+filehandle HANDLE ?
+stringlength dword ?
+byteswritten dword ?
+
+str2 byte "Bytes Wriiten To File [MyFile.txt]",0
+str3 byte "Enter up to 500 characters and press"
+byte "[Enter]",0dh,0ah,0
+
+
+.code
+main PROC
+
+;Creating File
+mov edx,offset filename
+call createoutputfile
+mov filehandle,eax
+
+;Reading The String
+
+mov edx,offset str3
+call writestring
+mov ecx,BUFFER_Size
+mov edx,offset buffer
+call readstring
+mov stringlength,eax
+
+;Write To File
+
+mov eax,filehandle
+mov edx,offset buffer
+mov ecx,stringlength
+call writetofile
+
+;Close The File
+mov byteswritten,eax
+call closefile
+
+;Output The Number of Bytes Written
+mov edx, offset str2
+call writestring
+mov eax,byteswritten
+call writedec
+
+exit
+main ENDP
+end main

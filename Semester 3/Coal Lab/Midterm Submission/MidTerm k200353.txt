@@ -1,0 +1,373 @@
+*********************************************** Task 1a **************************************************
+Include Irvine32.inc
+.data
+data1 dword 25
+data2 dword 36
+data3 byte 20
+
+
+.code
+main PROC
+mov eax,0
+mov eax,86
+add eax,0F23h
+sub eax,34o
+sub eax,76
+add eax,1010b
+
+call writehex
+call crlf
+
+mov eax,0
+movzx ebx,data3
+mov eax,data1
+sub eax, ebx
+add eax, 456h
+add eax,data2
+
+call writehex
+call crlf
+
+
+exit
+main  ENDP
+end main
+
+
+*********************************************** Task 1b **************************************************
+Include Irvine32.inc
+.data
+va1 word 65535
+
+
+
+.code
+main PROC
+movzx ebx,va1
+mov eax,ebx
+call writedec
+call crlf
+mov eax,1000
+call Delay
+mov eax,ebx
+sub eax,2
+call writedec
+
+exit
+main  ENDP
+end main
+
+*********************************************** Task 1c **************************************************
+Include Irvine32.inc
+.data
+array word 3,7,2,5,9
+
+
+
+.code
+main PROC
+mov eax,lengthof array
+call writedec
+call crlf
+mov eax,sizeof array
+call writedec
+
+exit
+main  ENDP
+end main
+
+*********************************************** Task 2 **************************************************
+Include Irvine32.inc
+
+
+.code
+main PROC
+
+mov eax,7
+mov ecx,9
+l1:
+call writedec
+call crlf
+add eax,3
+
+loop l1
+
+
+exit
+main  ENDP
+end main
+
+
+
+
+*********************************************** Task 3 a**************************************************
+Include Irvine32.inc
+.data
+ str1 byte "black",0
+
+
+.code
+main PROC
+
+mov esi,2
+mov eax,0
+mov al,str1[esi*Type str1]
+call writechar
+
+
+exit
+main  ENDP
+end main
+
+*********************************************** Task 3 b**************************************************
+Include Irvine32.inc
+.data
+arr1 byte 10,20,30,40,50
+arr2 word 5 DUP (?)
+count1 dword 0
+count2 dword 8
+
+.code
+main PROC
+
+
+mov ecx,lengthof arr2
+l1:
+mov esi,offset arr1
+add esi,count1
+mov eax,0
+mov al,[esi]
+mov esi,offset arr2
+add esi,count2
+mov [esi],ax
+add count1,1*type byte
+sub count2,1*type word
+
+
+loop l1
+
+mov esi,0
+mov ecx,lengthof arr2
+
+l2:
+mov eax,0
+mov	ax, arr2[esi*Type arr2]
+call writedec
+call crlf
+
+inc esi
+loop l2
+
+
+exit
+main  ENDP
+end main
+
+*********************************************** Task 4a **************************************************
+Include Irvine32.inc
+.data
+arr byte 2,3,4,5,6
+varSum dword ?
+count1 dword 4
+var1 dword ?
+var2 dword ?
+
+
+.code
+main PROC
+
+mov ecx,lengthof arr
+mov esi,0
+l1:
+mov var1,ecx  
+	movzx ecx,arr[esi*type arr]
+	mov eax,0
+	mov edx,0
+	l2:
+	mov var2,ecx
+	movzx ebx,arr[esi*type arr]
+	add eax,ebx
+	mov ecx,var2
+	loop l2
+
+	add varSum,eax
+inc esi
+mov ecx,var1
+loop l1
+
+mov eax,varSum
+call writedec
+
+exit
+main  ENDP
+end main
+
+
+
+*********************************************** Task 4b **************************************************
+Include Irvine32.inc
+.data
+var1 dword ?
+var2 dword ?
+
+.code
+main PROC
+
+
+call test1
+
+main  ENDP
+
+test1 proc
+
+
+mov eax,green+(red*16)
+call settextcolor
+call clrscr
+
+mov eax,100
+call randomrange
+call writedec
+mov var1,eax
+
+mov eax,'+'
+call writechar
+
+mov eax,100
+call randomrange
+call writedec
+mov var2,eax
+
+mov eax, var1
+add eax, var2
+mov var1,eax
+
+mov eax,'='
+call writechar
+mov eax,var1
+
+call writedec
+exit
+test1 endp
+end test1
+
+end main
+
+
+*********************************************** Task 5a **************************************************
+Include Irvine32.inc
+.data
+intArr sword 0,0,0,0,1,-20,24,-34,29,8,0
+str1 byte "Found:",0
+str2 byte "Not Found:",0
+
+
+
+.code
+main PROC
+
+mov esi,0
+mov ecx,lengthof intArr
+l1:
+cmp intArr[esi*type intArr],0
+jl print
+
+inc esi
+loop l1
+mov edx,offset str2
+call writestring
+jmp quit
+
+print:
+mov edx,offset str1
+movsx eax, intArr[esi*type intArr]
+call writestring
+call writeint
+jmp quit
+
+
+quit:
+exit
+main  ENDP
+end main
+
+
+
+*********************************************** Task 5b **************************************************
+Include Irvine32.inc
+.data
+str1 byte "Enter Value For V1:",0
+str2 byte "Enter Value For V2:",0
+v1 dword ?
+v2 dword ?
+y dword ?
+
+.code
+main PROC
+mov edx, offset str1
+call writestring
+call readdec
+mov v1,eax
+
+mov edx, offset str2
+call writestring
+call readdec
+mov v2,eax
+
+mov ebx, v2
+cmp v1,ebx
+jae l1
+cmp v2,5
+jne l1
+
+mov y,5
+jmp quit
+
+l1:
+mov y,2
+jmp quit
+
+
+quit:
+mov eax,y
+call writedec
+exit
+main  ENDP
+end main
+
+*********************************************** Task 6***************************************************
+Include Irvine32.inc
+.data
+str1 byte "Enter Number Of Lines:",0
+var1 dword ?
+var2 dword ?
+count1 dword ?
+count2 dword 1
+
+
+.code
+main PROC
+mov edx,offset str1
+call writestring
+call readdec
+mov count1,eax
+
+mov ecx,count1
+l1:
+mov var1,ecx
+mov ecx,count2
+	l2:
+	mov var2,ecx
+	mov eax,'*'
+	call writechar
+	mov ecx,var2
+	loop l2
+	inc count2
+call crlf
+mov ecx,var1
+loop l1
+
+
+exit
+main  ENDP
+end main

@@ -1,0 +1,236 @@
+************************************************** Task 1 *****************************************************************
+Include Irvine32.inc
+.data
+str1 byte '127&j~3#^&*#*#45^',0
+
+.code
+main PROC
+mov edi,offset str1
+mov al,'#'
+mov ecx,lengthof str1
+cld
+repne scasb
+jnz quit
+dec edi
+sub edi,offset str1
+call dumpregs
+
+quit:
+exit
+main ENDP
+end main
+
+************************************************** Task 2 *****************************************************************
+Include Irvine32.inc
+.data
+str1 byte '127&j~3#^&*#*#45^',0
+myArrLen dword ?
+
+.code
+
+scan_char PROTO copyi: ptr byte, Len:dword
+
+main PROC
+mov myArrLen, lengthof str1
+
+invoke scan_char, ADDR str1, myArrLen
+
+exit
+main ENDP
+
+scan_char PROC copyi:ptr byte, Len:dword
+mov edi,copyi
+mov al,'#'
+mov ecx,Len
+cld
+repne scasb
+jnz quit
+dec edi
+sub edi,copyi
+call dumpregs
+
+quit:
+ret
+scan_char ENDP
+end main
+
+
+************************************************** Task 3 *****************************************************************
+Include Irvine32.inc
+
+.data
+str1 byte "racecar",0
+str2 byte "raceca",0
+str1Len dword ?
+str2Len dword ?
+mess1 byte "Sadly It is Not Equal",0
+mess2 byte "Sadly It is Equal",0
+
+
+.code
+
+isCompare PROTO  copy1:ptr byte, copy2:ptr byte, Len1:dword, Len2:dword
+
+main PROC
+
+mov str1Len, lengthof str1 
+mov str2Len, lengthof str2 
+
+
+invoke isCompare, ADDR str1, ADDR str2, str1Len, str2Len
+
+exit
+main ENDP
+
+
+isCompare PROC  copy1:ptr byte, copy2:ptr byte, Len1:dword, Len2:dword
+mov esi, copy1
+mov edi, copy2
+mov ecx, Len1
+cld
+repe cmpsb
+jnz notE
+jmp equalE
+
+notE:
+mov edx,offset mess1
+jmp quit
+
+equalE:
+mov edx, offset mess2
+
+quit:
+call writestring
+
+ret
+isCompare ENDP
+end main
+
+
+
+
+
+************************************************** Task 4 *****************************************************************
+Include Irvine32.inc
+
+.data
+str1 byte "Why Do I Exist Only To Suffer",0
+str2 byte	lengthof str1 DUP(?)
+str1Len dword ?
+
+.code
+
+Moving PROTO source:ptr byte, des:ptr byte, Len1:dword 
+
+main PROC
+mov str1Len, lengthof str1
+invoke Moving, ADDR str1, ADDR str2, str1Len
+
+
+
+exit
+main ENDP
+
+Moving PROC source:ptr byte, des:ptr byte, Len1:dword 
+mov ecx, Len1
+cld
+mov esi,source
+mov edi,des
+l1:
+lodsb
+;call dumpregs
+stosb
+loop l1
+
+mov edx, des
+call writestring
+
+
+
+ret
+Moving ENDP
+end main
+
+
+
+************************************************** Task 5 *****************************************************************
+Include Irvine32.inc
+
+.data
+str1 byte 32 DUP(?)
+str2 byte 32 DUP(?)
+str3 byte "Enter Your String:",0
+var1 dword ?
+
+.code
+
+Str_Reverse PROTO string1:ptr byte, string2:ptr byte, len:dword
+
+main PROC
+mov edx,offset str3
+call writestring
+mov ecx,32
+mov edx,offset str1
+call readstring
+mov var1,eax
+
+invoke Str_Reverse, addr str1,addr str2,var1
+mov edx,offset str2
+call writestring
+
+exit
+main ENDP
+
+Str_Reverse PROC string1:ptr byte, string2:ptr byte, len:dword
+mov esi, string1
+add esi,len
+sub esi,1
+mov edi, string2
+std
+mov ecx,len
+Move:
+movsb
+add edi,2
+loop Move
+ret
+Str_Reverse ENDP
+end main
+
+
+************************************************** Task 6 *****************************************************************
+Include Irvine32.inc
+
+.data
+arr dword 1,2,3,4,5,6,7,8,9,10					; test data
+multiplier DWORD 3								; test data
+.code
+
+arrMul PROTO array:ptr dword, mux:dword,len:dword
+
+main PROC
+
+
+invoke arrMul,addr arr, multiplier,lengthof arr
+
+mov esi , OFFSET arr
+mov ecx, LENGTHOF arr
+mov ebx, TYPE arr
+call dumpmem
+
+exit
+main ENDP
+
+arrMul PROC array:ptr dword, mux:dword,len:dword
+cld
+
+mov esi,array
+mov edi,esi
+mov ecx,len
+L1: 
+lodsd												; load [ESI] into EAX
+mul mux												; multiply by a value
+stosd												; store EAX into [EDI]
+loop L1
+ret
+arrMul ENDP
+end main

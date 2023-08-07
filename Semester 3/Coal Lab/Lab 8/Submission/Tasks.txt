@@ -1,0 +1,314 @@
+************************** Task 1 *****************************
+Include Irvine32.inc
+
+.data
+arr word 1,2,3,4,5,6,7,8,9,10 
+arr2 word 10 DUP(?)
+str1 byte "Enter Element",0
+
+.code
+main PROC
+
+
+;For Calling Dump mem
+mov esi,offset arr
+mov ecx,lengthof arr
+mov ebx,type arr
+
+call dumpmem
+
+mov esi,0
+mov ecx,10
+l1:
+push arr[esi*type arr]
+inc esi
+loop l1
+
+mov esi,0
+mov ecx,10
+l2:
+pop arr2[esi*type arr]
+inc esi
+loop l2
+
+;For Calling Dump mem
+mov esi,offset arr2
+mov ecx,lengthof arr2
+mov ebx,type arr2
+
+call dumpmem
+
+
+exit
+main ENDP
+end main
+
+
+************************** Task 2 *****************************
+Include Irvine32.inc
+
+
+.data
+arr1 dword 1,2,3,4,5
+arr2 dword 6,7,8,9,10
+
+.code
+main PROC
+call sum3
+
+exit
+main ENDP
+
+
+sum1 PROC 
+
+mov esi,0
+mov ecx,lengthof arr1
+mov eax, 0
+l1:
+add eax, arr1[esi*type arr1]
+inc esi
+loop l1
+
+call writedec
+call crlf
+ret
+
+sum1 ENDP
+
+
+sum2 PROC
+
+mov esi,0
+mov ecx,lengthof arr2
+mov ebx, 0
+l1:
+add ebx, arr2[esi*type arr2]
+inc esi
+loop l1
+
+mov edx, eax
+mov eax,ebx
+call writedec
+call crlf
+mov eax,edx
+
+ret
+sum2 ENDP
+
+
+sum3 PROC
+
+call sum1
+call sum2
+
+add eax,ebx
+call writedec
+call crlf
+
+
+ret
+sum3 ENDP
+
+
+end main
+
+
+
+************************** Task 3 *****************************
+Include Irvine32.inc
+
+.data
+str1 byte "Enter the number of columns:",0
+var1 dword ?
+var2 dword ?
+var3 dword ?
+count1 dword 3
+count2 dword 1
+count3 dword ?
+
+.code
+main PROC
+
+call GettingInput
+call PatternBuild
+
+
+exit
+main ENDP
+
+
+GettingInput PROC uses edx
+mov edx, offset str1
+call writestring
+call readdec
+mov count1,eax
+mov count3,eax
+dec count3
+
+ret
+GettingInput ENDP
+
+
+PatternBuild PROC 
+
+mov ecx,count1
+l1:
+mov var1,ecx
+
+cmp count3,0
+jbe continue
+
+mov ecx,count3
+l3:
+mov var3,ecx
+mov eax,' '
+call writechar
+mov ecx,var3
+loop l3
+
+continue:
+mov ecx,count2
+	l2:
+	mov var2,ecx
+	mov eax,'*'
+	call writechar
+	mov ecx,var2
+	loop l2
+	inc count2
+
+call crlf
+mov ecx,var1
+dec count3
+loop l1
+
+ret
+PatternBuild ENDP
+
+
+end main 
+
+
+************************** Task 4 *****************************
+Include Irvine32.inc
+
+.data
+str1 byte "Enter the number of columns:",0
+str2 byte "ABCDEFGHIJKLMNOPQRSTUVWXYZ",0
+var1 dword ?
+var2 dword ?
+var3 dword ?
+count1 dword 3
+count2 dword 1
+count3 dword ?
+
+.code
+main PROC
+
+call GettingInput
+call PatternBuild
+
+
+exit
+main ENDP
+
+
+GettingInput PROC uses edx
+mov edx, offset str1
+call writestring
+call readdec
+mov count1,eax
+mov count3,eax
+dec count3
+
+ret
+GettingInput ENDP
+
+
+PatternBuild PROC 
+
+mov ecx,count1
+mov esi,0
+l1:
+mov var1,ecx
+
+cmp count3,0
+jbe continue
+
+mov ecx,count3
+l3:
+mov var3,ecx
+mov eax,' '
+call writechar
+mov ecx,var3
+loop l3
+
+continue:
+mov ecx,count2
+	l2:
+	mov var2,ecx
+	movzx eax,str2[esi*type str2]
+	call writechar
+	mov ecx,var2
+	inc esi
+	loop l2
+	inc count2
+
+call crlf
+mov ecx,var1
+dec count3
+loop l1
+
+ret
+PatternBuild ENDP
+
+
+end main 
+
+
+
+
+************************** Task 5 *****************************
+Include Irvine32.inc
+
+.data
+str1 byte "Enter the number of elements:",0
+count1 dword ?
+
+
+.code
+main PROC
+
+call GettingInput
+call funPrint
+
+
+exit
+main ENDP
+
+
+GettingInput PROC uses edx
+mov edx, offset str1
+call writestring
+call readdec
+mov count1,eax
+
+ret
+GettingInput ENDP
+
+
+funPrint PROC 
+mov ecx, count1
+mov eax,1
+l1:
+call writedec
+call crlf
+inc eax
+
+loop l1
+
+ret
+funPrint ENDP
+
+
+end main 

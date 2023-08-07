@@ -1,0 +1,328 @@
+********************************************************* Q1 ****************************************************************
+Include Irvine32.inc
+Include Macros.inc
+.data
+i dword 0
+arr dword 7,5,3,6,1,2,4,0
+.code
+main PROC
+mov ecx, lengthof arr
+L1:
+	mov esi,0
+	push ecx
+	mov ecx,lengthof arr
+	sub ecx,i
+	dec ecx
+	cmp ecx,0
+	je SkipOuter
+	L2:
+		mov eax,arr[esi]
+		cmp eax,arr[esi+type arr]
+		jna DontSwap
+		xchg arr[esi+type arr],eax
+		mov arr[esi],eax
+		DontSwap:
+		add esi,type arr
+	Loop L2
+	SkipOuter:
+	pop ecx
+	inc i
+Loop L1
+mov ecx, lengthof arr
+mov esi,0
+L3:
+	mov eax,arr[esi]
+	call writedec
+	mWrite " "
+	add esi,type arr
+Loop L3
+exit
+main ENDP
+END main
+********************************************************* Q2 ****************************************************************
+Include Irvine32.inc
+
+.data
+num dword ?
+str1 byte "It is an ArmStrong Number",0
+str2 byte "It is not an ArmStrong Number",0
+
+.code
+main PROC
+call TakeInput
+exit
+main ENDP
+
+TakeInput PROC
+call readdec
+mov num,eax
+
+call armstrong
+
+ret
+TakeInput ENDP
+
+armstrong PROC
+LOCAL rem:byte
+mov ebx,0
+mov bl,10
+mov eax,num
+mov edx,0
+
+jmp condition
+
+
+do:
+div bl
+push eax
+movzx eax,ah
+mov rem,al
+mul rem
+mul rem
+add edx,eax
+pop eax
+movzx eax,al
+
+
+condition:
+cmp eax,0
+jne do
+
+cmp num,edx
+jne no
+stc
+jmp continue
+
+no:
+clc
+
+
+continue:
+call Display
+
+ret
+armstrong ENDP
+
+Display PROC
+
+jc yes
+mov edx,offset str2
+jmp print
+
+yes:
+mov edx, offset str1
+
+print:
+call writestring
+
+ret
+Display ENDP
+
+end main
+********************************************************* Q3 ****************************************************************
+Include Irvine32.inc
+.data
+str1 byte "Hello",0
+str2 byte lengthof str1 DUP(?)
+
+recurse PROTO
+
+.code
+
+main PROC
+mov esi,0
+mov ecx,lengthof str1-1
+invoke recurse
+mov edx,offset str2
+call writestring
+exit
+main ENDP
+
+recurse PROC
+
+cmp ecx,0
+je base
+jmp continue
+
+continue:
+dec ecx
+mov bl,str1[ecx*type str1]
+mov str2[esi*type str2],bl
+inc esi
+invoke recurse
+
+
+base:
+ret
+recurse ENDP
+end main
+********************************************************* Q4 ****************************************************************
+Include Irvine32.inc
+
+.data
+str1  byte "Enter The Value To Be Squared:",0
+
+.code
+
+LocalSquare PROTO
+
+main PROC
+
+Invoke LocalSquare
+
+exit
+main ENDP
+
+LocalSquare PROC
+
+Enter 4,0									
+mov edx, offset str1
+call readint
+mov [ebp-4], eax
+
+mov eax,[ebp-4]
+mov edx,0
+mul eax
+
+call writeint
+
+leave
+ret
+LocalSquare ENDP
+
+end main
+********************************************************* Q5 ****************************************************************
+Include Irvine32.inc
+
+.data
+str1 byte "Enter N:",0
+
+.code
+
+FACTORIAL PROTO
+
+main PROC
+mov edx, offset str1
+call writestring
+call readdec
+mov ecx,eax
+mov eax,1
+invoke FACTORIAL
+
+exit 
+main ENDP
+
+FACTORIAL PROC 
+
+
+jmp checkCondition
+
+do:
+mul ecx
+dec ecx
+invoke FACTORIAL
+ret
+
+checkCondition:
+cmp ecx,0
+ja do
+
+call writedec
+ret
+FACTORIAL ENDP
+end main
+
+********************************************************* Q6 ****************************************************************
+Include Irvine32.inc
+
+.data
+arrA dword 1,3,5,7
+arrB dword lengthof arrA DUP(?)
+
+
+.code
+
+CheckPrime PROTO n:dword
+LargestPrime PROTO arr:ptr dword,n:dword
+
+main PROC
+
+mov esi,0
+mov edi,0
+mov ecx, lengthof arrA
+
+l1:
+mov eax,arrA[esi*type arrA]
+invoke CheckPrime, eax
+cmp edx,1
+jne next
+mov arrB[edi*type arrB], eax
+inc edi
+
+next:
+inc esi
+loop l1
+
+invoke LargestPrime, ADDR arrB,edi
+
+
+exit
+main ENDP
+
+CheckPrime PROC n:dword
+mov eax,n
+push ecx
+mov edx,eax
+mov ebx,0
+mov bl,2
+div bl
+movzx ecx,al
+mov eax,edx
+
+cmp eax,1
+je notPrime
+cmp eax,0
+je notPrime
+
+l1:
+div bl
+cmp ah,0
+je notPrime
+
+inc bl
+mov eax,edx
+loop l1
+jmp prime
+
+notPrime:
+mov edx,0
+jmp quit
+
+prime:
+mov edx,1
+
+
+quit:
+pop ecx
+ret
+CheckPrime ENDP
+
+LargestPrime PROC arr:ptr dword, n:dword
+
+mov ecx,n
+mov esi,arr
+mov eax, [esi]
+l1:
+cmp [esi],eax
+jbe next
+mov eax,[esi]
+
+next:
+add esi,4
+loop l1
+
+call writedec
+
+ret
+LargestPrime ENDP
+end main
