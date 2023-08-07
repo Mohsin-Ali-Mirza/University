@@ -5,7 +5,7 @@ Welcome to the repository for my university courses. Here, you can find the cour
 ## Semesters
 
 - Semester 1
-- [Semester 2](link)
+- [Semester 2](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem2)
 - [Semester 3](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3)
 - [Semester 4](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4)
 - [Semester 5](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem5)
@@ -24,9 +24,9 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 ### Semester 2
 
-- [Object Oriented Programming (OOP)](link)
+- [Object Oriented Programming (OOP)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem2/OOP)
 - Object Oriented Programming - Lab (OOP Lab)
-- [Differential Equations (DE)](link)
+- [Differential Equations (DE)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem2/DE)
 - Digital Logic Design (DLD)
 - Digital Logic Design - Lab (DLD Lab)
 
