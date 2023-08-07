@@ -1,0 +1,43 @@
+--TASK 1
+CREATE TABLE Person (
+ID int NOT NULL,
+Name varchar (50) NOT NULL,
+PreviousName varchar (50) NULL,
+SameNameCount int NULL,
+CONSTRAINT pk_Person PRIMARY KEY (ID));
+
+insert into Person values(100,'Mohsin',NULL,NULL);
+
+CREATE OR REPLACE TRIGGER tbr_Person_u
+  BEFORE UPDATE
+  ON Person
+FOR EACH ROW WHEN (NEW.Name IS NOT NULL AND NEW.Name <> OLD.Name)
+BEGIN
+    --Update PreviousName if name change
+    :NEW.PreviousName := :OLD.Name;
+END;
+/
+
+UPDATE PERSON SET NAME='ZOHAIR' WHERE ID=100;
+
+--Split trigger into insert, delete and update trigger
+CREATE OR REPLACE TRIGGER tas_Person_id
+  AFTER INSERT OR DELETE
+  ON Person
+BEGIN
+    --Update SameNameCount
+    UPDATE Person p
+    SET SameNameCount = (SELECT COUNT(*) FROM Person WHERE Name = p.Name);
+END;
+/
+ 
+CREATE OR REPLACE TRIGGER tas_Person_u
+  AFTER UPDATE OF Name ON Person 
+BEGIN
+    --Update SameNameCount
+    UPDATE Person p
+    SET SameNameCount = (SELECT COUNT(*) FROM Person WHERE Name = p.Name);
+END;
+/
+
+insert into Person values(200,'ZOHAIR',NULL,NULL);	
