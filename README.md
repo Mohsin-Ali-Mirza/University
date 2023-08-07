@@ -4,14 +4,14 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 ## Semesters
 
-- [Semester 1](link)
+- Semester 1
 - [Semester 2](link)
 - [Semester 3](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem3)
 - [Semester 4](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4)
 - [Semester 5](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem5)
-- [Semester 6](link)
-- [Semester 7](link)
-- [Semester 8](link)
+- [Semester 6](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6)
+- Semester 7
+- Semester 8
 
 ## Courses Studied
 
@@ -59,12 +59,12 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 ### Semester 6
 
-- [Artificial Intelligence (AI)](link)
-- [Artificial Intelligence - Lab (AI Lab)](link)
+- [Artificial Intelligence (AI)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/Ai)
+- [Artificial Intelligence - Lab (AI Lab)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/Ai_Lab)
 - Computer Networks (CN)
 - Computer Networks - Lab (CN Lab)
-- [Software Engineering (SE)](link)
-- [Deep Learning for Perception (DLP)](link)
+- [Software Engineering (SE)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/SE)
+- [Deep Learning for Perception (DLP)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/DLP)
 
 Feel free to explore the course links for more information and resources related to each subject. If you have any questions or need assistance, don't hesitate to contact me.
 
