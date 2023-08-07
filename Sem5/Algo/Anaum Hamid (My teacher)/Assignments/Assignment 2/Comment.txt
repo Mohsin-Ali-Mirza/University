@@ -1,0 +1,7 @@
+In Question2 of Assignment2, there is a mistake in given example
+
+Example:
+For example : A = 3124 and B= 5162 and x=10 then no element in A if added to element in B can make 10. So not possible
+
+Mistake:
+10 is possible if we take 4 from A and 6 from B.
