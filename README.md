@@ -39,17 +39,17 @@ Welcome to the repository for my university courses. Here, you can find the cour
 
 ### Semester 4
 
-- [Operating Systems (OS)](link)
-- [Operating Systems - Lab (OS Lab)](link)
-- [Numerical Computing (NC)](link)
-- [Theory of Automata (TOA)](link)
-- [Probability and Statistics (Prob)](link)
+- [Operating Systems (OS)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4/OS)
+- Operating Systems - Lab (OS Lab)
+- [Numerical Computing (NC)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4/NC)
+- [Theory of Automata (TOA)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4/TOA)
+- [Probability and Statistics (Prob)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4/Prob)
 - [Psychology (Psych)](link)
-- [Database Systems (DB)](link)
-- [Database Systems - Lab (DB Lab)](link)
 
 ### Semester 5
 
+- [Database Systems (DB)](link)
+- [Database Systems - Lab (DB Lab)](link)
 - [Design and Analysis of Algorithms (Algo)](link)
 - [Software Design and Analysis (SDA)](link)
 - [Parallel and Distributed Computing (PDC)](link)
