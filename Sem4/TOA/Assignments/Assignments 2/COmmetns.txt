@@ -1,0 +1,8 @@
+one tip. while solving assignmnet 2 in q6 . when u will perform clousure. then you would observe that initial n final states are same and there is loop of a or b on initial state. in this case you dont need to introduce separate state as we did in class. if you introduce the separate state you would have to make it final also according to the rules( that when ever final state occurs make it that state final) so its better to not to introduce that state.
+
+One more thing in Q6. The FA has corresponding RE : (1* +01*0)*, which is in closure form. so ((1* +01*0)*)* = (1* +01*0)*. The resultant FA would be same. 
+
+
+(aa)*, (bb)*, a(bb)*a, b(aa)*b etc are the languages which are regular and also are subsets of ww^R. 
+
+next thing a* or b* only are not ww^r, because they have both even and odd length, the language ww^R would have even length always(you learnt in discrete odd+odd is even and even+even is also even.)

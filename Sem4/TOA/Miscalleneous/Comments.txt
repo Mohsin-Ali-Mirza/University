@@ -1,0 +1,8 @@
+Go through this,
+ Just singe machine is needed for this and we need to change the final states only.
+This contains:
+DFA for ODD-ODD Language(iodd a's and odd b's)
+DFA for EVEN-EVEN Language(even a's and even b's)
+
+DFA for EVEN-ODD Language(even a's and odd b's)
+DFA for ODD-EVEN Language(odd a's and even b's)
