@@ -1,0 +1,199 @@
+ **************************** Task 1 ***********************************
+Include Irvine32.inc
+
+
+.data
+arr1 dword 10 DUP(0)
+msg1 byte "Enter The Number:",0
+
+
+.code
+main PROC
+mov edx, offset msg1
+call writestring
+call readdec
+
+mov ebx,eax
+mov edx, eax
+
+shl eax, 0
+shl ebx, 2
+shl edx, 4
+
+add eax, ebx
+add eax,edx
+
+call writedec
+
+
+exit
+main ENDP
+end main
+
+**************************** Task 2 ************************************
+Include Irvine32.inc
+
+
+.data
+
+
+.code
+main PROC
+mov eax,0
+mov ax,-128d
+shl eax,16
+sar eax,16
+
+
+call writeint
+
+
+exit
+main ENDP
+end main
+
+
+
+
+
+
+**************************** Task 3 ************************************
+Include Irvine32.inc
+.data
+bMinutes byte ?
+
+.code
+main proc
+
+mov eax,1111010111010101b
+mov edx,eax
+shr edx,5
+and edx,0000000000111111b
+mov bMinutes,dl
+mov eax, edx
+call writebinb
+
+exit
+main ENDP
+END main
+
+
+
+**************************** Task 4 ************************************
+Include Irvine32.inc
+
+
+.data
+
+
+.code
+main PROC
+clc
+mov ebx,0
+mov bx, 1010110101010111b
+mov ax, 1001010101010110b
+;shrd bx,ax,1
+shr ax,1
+rcr bx,1
+
+movzx eax,bx
+call writebin
+
+
+exit
+main ENDP
+end main	
+
+
+
+**************************** Task 5 ************************************
+Include Irvine32.inc
+
+
+.data
+val1 sbyte 12
+val2 sbyte -6
+val3 sbyte 3
+temp sbyte ?
+temp2 sbyte ?
+
+
+.code
+main PROC
+mov al,val2
+cbw
+idiv val3
+mov temp,al					;Temp has val2/val3
+
+mov al,val1
+cbw
+idiv val2
+mov temp2,al				;Al still has val1/val2
+
+imul temp
+mov bx,ax
+movsx eax,bx
+call writeint
+
+
+
+
+
+
+exit
+main ENDP
+end main
+
+
+
+
+**************************** Task 6 ************************************
+Include irvine32.inc
+
+.data
+
+num1 qword 7285f3ed67822a98h
+num2 qword 12f1e33cd12f5725h
+sum dword 3 dup(?)
+.code
+main proc
+
+mov esi,offset num1
+mov edi,offset num2
+mov ebx,offset sum
+mov ecx,2
+
+
+call Extended_add
+mov eax,[sum+8]
+call writehex
+mov eax,[sum+4]
+call writehex
+mov eax,sum
+call writehex
+
+
+main endp
+
+Extended_add proc
+pushad
+clc
+l1:
+mov eax,[esi]
+adc eax,[edi]
+pushfd
+mov [ebx],eax
+add esi,4
+add edi,4
+add ebx,4
+popfd
+loop l1
+adc word ptr [ebx],0
+popad
+ret
+Extended_add endp
+exit
+end main
+
+
+
