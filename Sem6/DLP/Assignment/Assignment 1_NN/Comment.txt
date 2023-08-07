@@ -1,0 +1,18 @@
+Use the following link
+
+To execute AND gate
+
+https://colab.research.google.com/drive/1O94z6Ycocnx7YqP09eAj8c7PFRmPrfIb?usp=sharing
+
+1) Change no. of hidden layers
+
+2) Execute this for fewer epochs and learn the behavior.
+
+3) Compute error for different learning rate, epochs, and hidden layers
+4) Repeat for NAND gate and XOR gates
+
+
+
+
+Submit code and a document containing results and graphs
+Late submissions are not allowed

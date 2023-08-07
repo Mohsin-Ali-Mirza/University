@@ -1,0 +1,17 @@
+https://github.com/google/eng-edu/blob/main/ml/pc/exercises/image_classification_part1.ipynb
+
+
+https://drive.google.com/file/d/1p62j7ZBrUcAe-uTh9eY1bYRWC1AQz0w9/view?usp=sharing
+
+Build a classifier to classify between dogs and cats
+
+
+1-  Draw the diagram and validate number of params and take a snapshot (submit snaphsot)
+1- Change hyper parameters (Kernel size)
+
+2- Add convolution and pooling
+3- Change pooling
+to observe output
+
+
+4. Change Dataset

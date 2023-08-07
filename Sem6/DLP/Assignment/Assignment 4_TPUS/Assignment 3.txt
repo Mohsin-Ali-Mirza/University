@@ -1,0 +1,7 @@
+Read about TPUs from huggingface
+
+https://huggingface.co/docs/transformers/main/perf_train_tpu_tf
+
+Execute this lab for training LLM on TPUs
+
+https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/tpu_training-tf.ipynb#scrollTo=OWZoq4MRqcUn

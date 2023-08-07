@@ -1,0 +1,10 @@
+Personally I didnt read these books
+
+1) Deep Learning for Vision Based Systems
+https://livebook.manning.com/book/deep-learning-for-vision-systems/welcome/v-8/
+
+
+2) Dive into deep learning
+
+
+https://d2l.ai/

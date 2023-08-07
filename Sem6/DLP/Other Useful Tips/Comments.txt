@@ -1,0 +1,40 @@
+https://startuppakistan.com.pk/un-offering-100-paid-internships-with-stipend-of-pkr-200000-for-pakistani-students/
+
+
+Twitter recommendation Algorithm
+
+https://github.com/twitter/the-algorithm
+
+
+ColossalChat: An Open-Source Solution for Cloning ChatGPT With a Complete RLHF Pipeline
+
+https://medium.com/@yangyou_berkeley/colossalchat-an-open-source-solution-for-cloning-chatgpt-with-a-complete-rlhf-pipeline-5edf08fb538b
+
+
+
+ChatGPT Outperforms Crowd-Workers for Text-Annotation Tasks
+LLMs Can Outperform Humans on Data Annotation
+
+https://arxiv.org/abs/2303.15056?fbclid=IwAR1NVvLxZbPptO3QJ-EKsCOYQLrZOQTiXt3Jso_lz7rTYdQEpGwd826o3Z8
+
+ChatGPT or Grammarly? Evaluating ChatGPT on Grammatical Error Correction Benchmark
+
+
+https://arxiv.org/abs/2303.13648?fbclid=IwAR1dBp-uke6-Wskz63p7fDspyskoAHMq70fP71aCVOu1GwTbWEDT2i8GI_w
+
+
+
+https://www.marktechpost.com/2023/03/26/researchers-from-stanford-introduce-locally-conditioned-diffusion-a-method-for-compositional-text-to-image-generation-using-diffusion-models/
+
+https://blog.roboflow.com/supervision/
+
+https://learn.microsoft.com/en-us/azure/cognitive-services/openai/how-to/chatgpt?pivots=programming-language-chat-completions
+
+Build Machine Learning Apps with Docker Spaces
+https://www.docker.com/blog/build-machine-learning-apps-with-hugging-faces-docker-spaces/
+
+Together Releases The First Open-Source ChatGPT Alternative Called OpenChatKit
+Quick Read: https://www.marktechpost.com/.../together-releases-the.../
+Demo: https://huggingface.co/spaces/togethercomputer/OpenChatKit
+Model: https://huggingface.co/togetherco.../GPT-NeoXT-Chat-Base-20B
+Github: https://github.com/togethercomputer/OpenChatKit

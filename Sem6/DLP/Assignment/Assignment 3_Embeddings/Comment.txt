@@ -1,0 +1,11 @@
+Follow this link to create and practice word embeddings.
+
+Change the dataset and the hyperparamers to learn better 
+https://towardsdatascience.com/creating-word-embeddings-coding-the-word2vec-algorithm-in-python-using-deep-learning-b337d0ba17a8
+
+
+If you encounter problems then you may use the following
+
+
+
+https://www.kaggle.com/code/francoisdubois/build-your-word-embedding-from-scratch

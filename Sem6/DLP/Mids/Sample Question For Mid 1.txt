@@ -1,0 +1,15 @@
+Q1. Suppose you are developing a classifier which can
+determine if a student who is registered in the DLP course will be
+able secure scholarship for MS (DS) from HEC ? The input dataset include course
+grade, student’s CGPA, if a student has developed an industry based course
+project, and her marks in programming assignments of the course. Describe the
+Neural network architecture, mathematical equations, and activation functions.    
+
+
+
+
+
+
+
+Q2.   Suppose you want to develop a neural network which should detect a vertical edge in the red color ?     What will be the values of a filter?
+Hint:  https://datahacker.rs/convolution-rgb-image/
