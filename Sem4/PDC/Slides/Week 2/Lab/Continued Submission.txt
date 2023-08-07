@@ -1,0 +1,7 @@
+
+Write MPI pseudocode as per lecture as follows:
+Draw the block diagram of a cluster 
+Write the problem of summing a large array of integers in a distributed memory message passing paradigm
+Draw the workflow showing your processing.
+Write MPI pseudo as per lecture.
+See whiteboard snaps.

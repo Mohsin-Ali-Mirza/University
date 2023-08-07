@@ -1,0 +1,28 @@
+Nadeem Kafi
+Created Aug 29, 2022Aug 29, 2022
+Week # 2 theory and Lab coverage
+
+* Please leave your feedback by replying to this post. Thanks.
+
+Dear Student,
+
+Please start reading chapter # 2 of the textbook
+
+Theory Topics from chapter # 2 of the textbook:
+Section 2.1 Implicity Parallelism (full coverage with all examples)
+Section 2.2 Limitations of Memory Systems Performance (full coverage with all examples except stride access)
+Sub-Section 2.4.2 Interconnection Networks for Parallel Computers
+Sub-Section 2.4.3 Network Topologies
+Sub-Section 2.5.1 Message Passing Costs in Parallel Computers (only basic idea that it more time to access  remote distributed memory using a network than local memory by accessing )
+Lab
+Week # 1: Linux VM-based setup for OpenMP and MPI in the lab and on student home laptop/PC
+Week # 1: Basic Linux command lines and scripting (see attachments)
+Week # 2: Threads and OpenMP Lab of OS (see attached documents).
+Week # 3: Start of OpenMP basic program and concepts.
+
+
+Nadeem KafiSep 1, 2022
+Please don't submit it yet. In addition to installing the VM on your laptop, you need to compile both programs in the OpenMP-MPI Test Programs document. Also, try to run simple commands from Linux Command CheatSheet.
+
+Nadeem KafiSep 1, 2022
+Submission information has been updated in the post. Deadline extended till Sunday midnight.

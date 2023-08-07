@@ -1,0 +1,11 @@
+OPTIONAL: See relevant portions of the OpenMP workshop (shifted to the Video section).
+Today's topic is scheduling https://ppc.cs.aalto.fi/ch3/schedule/ (Read all examples and re-write them in your notebook).
+OPTIONAL: Skim pdf file for dynamic scheduling.
+Submission:
+Run the attached .cpp files in order to understand OpenMP workload Scheduling.
+Submit screenshots of your programs.
+
+lease copy (or download) all .cpp files from the URL: https://github.com/jakaspeh/concurrency/find/master
+
+Nadeem KafiSep 20, 2022
+ompCritical.cpp, ompFor.cpp, ompForSchedule.cpp are provided as a template, to help you see GitHub code. Our goal is to run both types of scheduling on loop iterations 100K (probably of different chunk sizes). You can use code from your previous submissions and add scheduling to lean and submit the results.
