@@ -25,7 +25,7 @@ Welcome to the repository for my university courses. Here, you can find the cour
 ### Semester 2
 
 - [Object Oriented Programming (OOP)](link)
-- [Object Oriented Programming - Lab (OOP Lab)](link)
+- Object Oriented Programming - Lab (OOP Lab)
 - [Differential Equations (DE)](link)
 - Digital Logic Design (DLD)
 - Digital Logic Design - Lab (DLD Lab)
