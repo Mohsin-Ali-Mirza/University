@@ -1,5 +1,0 @@
-https://www.hackerearth.com/practice/algorithms/graphs/depth-first-search/tutorial/?authuser=0
-
-https://www.hackerearth.com/practice/algorithms/graphs/breadth-first-search/tutorial/?authuser=0
-
-https://www.geeksforgeeks.org/add-and-remove-edge-in-adjacency-list-representation-of-a-graph/?authuser=0
