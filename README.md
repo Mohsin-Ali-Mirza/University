@@ -10,7 +10,7 @@ Welcome to the repository for my university courses. Here, you can find the cour
 - [Semester 4](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem4)
 - [Semester 5](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem5)
 - [Semester 6](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6)
-- Semester 7
+- [Semester 7](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem7)
 - Semester 8
 
 ## Courses Studied
@@ -65,6 +65,15 @@ Welcome to the repository for my university courses. Here, you can find the cour
 - Computer Networks - Lab (CN Lab)
 - [Software Engineering (SE)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/SE)
 - [Deep Learning for Perception (DLP)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/DLP)
+  
+### Semester 7
+
+- [Information Processing Techniques(IPT)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/Ai)
+- [Professional Practices (PPIT)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/Ai_Lab)
+- [Machine Learning (ML)](https://github.com/Mohsin-Ali-Mirza/University/tree/main/Sem6/Ai_Lab)
+- Devops (Devops)
+- Fundamentals Of Natural Processing Language (FNLP)
+
 
 Feel free to explore the course links for more information and resources related to each subject. If you have any questions or need assistance, don't hesitate to contact me.
 
