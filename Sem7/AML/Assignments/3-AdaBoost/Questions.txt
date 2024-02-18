@@ -1,0 +1,4 @@
+- You are required to apply AdaBoost Algorithm from scratch in Python on any Kaggle Dataset of your choice. 
+- Classifier must be other than Decision Trees.
+- No. of Estimator must be at least 5. 
+- Submit your Colab code file (.ipynb) at GCR.
