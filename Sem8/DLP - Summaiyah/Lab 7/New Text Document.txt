@@ -1,0 +1,10 @@
+Your task is to develop a Machine Translation model.   You need  to train it using the Quranic dataset in both English and Urdu.  Please ensure you train it for a minimum of 5 epochs.
+
+Your submission should include these:
+a) Your notebook with working examples of Urdu/English versions
+b) A pdf containing the results of your work (Examples of text and BLEU score)
+
+You will not be graded on BLEU score, but its essential that you add BLEU scores for each of your models. 
+
+You may use this code as a reference or you may use any other code.
+https://www.kaggle.com/code/nageshsingh/neural-machine-translation-attention-mechanism/notebook
